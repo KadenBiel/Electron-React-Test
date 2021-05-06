@@ -1,0 +1,38 @@
+{
+  "name": "electron-react-test",
+  "version": "1.0.0",
+  "description": "A test of using React hooks with Electron",
+  "main": "src/main/main.ts",
+  "author": "Kaden Biel",
+  "license": "GNU",
+  "scripts": {
+    "dev": "electron-webpack dev",
+    "compile": "electron-webpack",
+    "dist": "yarn compile && electron-builder --win --x64 --ia32",
+    "dist:32": "yarn compile && electron-builder --win --ia32",
+    "dist:64": "yarn compile && electron-builder --win --x64"
+  },
+  "dependencies": {
+    "@material-ui/core": "^4.11.3",
+    "@material-ui/icons": "^4.11.2",
+    "@material-ui/lab": "^4.0.0-alpha.57",
+    "builder-util-runtime": "^8.7.4",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2",
+    "react-router-dom": "^5.2.0"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.12.10",
+    "@babel/preset-env": "^7.12.11",
+    "@babel/preset-react": "^7.12.1",
+    "@types/react": "^16.9.53",
+    "@types/react-dom": "^16.9.8",
+    "@types/webpack-env": "^1.15.3",
+    "electron": "9.4.4",
+    "electron-builder": "^22.9.1",
+    "electron-webpack": "^2.8.2",
+    "electron-webpack-ts": "^4.0.1",
+    "typescript": "^4.2.3",
+    "webpack": "~4.42.1"
+  }
+}

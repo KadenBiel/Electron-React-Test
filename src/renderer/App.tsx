@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React/*, { useState } */from 'react';
 import ReactDOM from 'react-dom';
 import { ipcRenderer } from 'electron';
 import { Button, Dialog, DialogActions, DialogContent, DialogTitle, IconButton, makeStyles } from '@material-ui/core';
@@ -35,19 +35,19 @@ const TitleBar: React.FC = function () {
 }
 
 const App: React.FC = function () {
-    const [stateTest, setStateTest] = useState(true) 
+    //const [stateTest, setStateTest] = useState(true) 
     return (
         <div>
             <TitleBar />
             <h1>React-Hook test</h1>
-            <Button onClick={() => {setStateTest(true)}}>Open</Button>
-            <Dialog open={stateTest}>
+            <Button onClick={() => {/*setStateTest(true)*/}}>Open</Button>
+            <Dialog open={true}>
                 <DialogTitle>This is a Dialog</DialogTitle>
                 <DialogContent>
                     It works!
                 </DialogContent>
                 <DialogActions>
-                    <Button onClick={() => {setStateTest(false)}}>Close</Button>
+                    <Button onClick={() => {/*setStateTest(false)*/}}>Close</Button>
                 </DialogActions>
             </Dialog>
         </div>
